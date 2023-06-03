@@ -1,114 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    display: inline;
-  }
-  </style>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Edwin Aloo</h1>
+        <p>Software Engeneer</p>
+    </header>
 
-  <section id="home">
-    <style>
-      body  {
-        /* background-image: url("images/R.jpeg"); */
-        background-color: #5b9b084b;
-      }
-      </style>
-    <h1>Welcome to My Portfolio</h1>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <style>
+          img {
+    border-radius: 60%;
+    max-width: 200px;
+    max-height: 550px;
+    width: auto;
+    height: auto;
+}
+        </style>
+        <img src="images/WhatsApp Image 2023-06-03 at 8.06.07 PM.jpeg" alt="Profile Picture">
+        <p>Hello. I am a passionate Fullstack developer with a degree in Software Engineering with strong programming skills and problem-solving abilities. Eager to contribute and grow as a junior developer.</p>
+    </section>
 
-    <p>This is my portfolio. Here you can find my skills, projects, and contact information.</p>
-  </section>
+    <section id="experience" class="section">
+        <h2>Professional Experience</h2>
+        <ul>
+            <li>
+                <h3>Moringa School</h3>
+                <p>Student</p>
+                <p>In this instution I pursued excellence, honing my junior skills to become a proficient and knowledgeable software engineer.</p>
+            </li>
+        </ul>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello there! I'm a frontend and backend developer with a passion for creating beautiful and functional websites. I specialize in HTML, CSS, and JavaScript, and I strive to deliver exceptional user experiences through my work. Explore my portfolio and get in touch with me to discuss your next project.</p>
-  </section>
-
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="gallery">
-      <div class="item">
-        <h3>Album-Cover</h3>
-        <img src="images/Live-again-album-cover.avif" alt="Project 1 image">
-        <p>Description of Album-cover </p>
-        <h2>An evocative album cover adorned with vibrant colors and abstract patterns that capture the essence of the music's emotional journey.</h2>
-        <button class="cta">
-          <span>https://phase-0-html-album-cover-lab.vercel.app/</span>
-          <svg viewBox="0 0 13 10" height="10px" width="15px">
-            <path d="M1,5 L11,5"></path>
-            <polyline points="8 1 12 5 8 9"></polyline>
-          </svg>
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Album Cover</h3>
+            <button>
+              <span>https://phase-0-html-album-cover-lab.vercel.app/</span>
+          </button>
+            <p>Developed a responsive website using HTML, CSS, and JavaScript. I created an Album cover with information of the album. Increased user engagement by implementing interactive features.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <button>
+              <span>https://phase-2-challenge-six.vercel.app/</span>
+          </button>
+            <p>I developed an application that efficiently organizes, searches, and securely stores user-inputted data, enhancing productivity and accessibility..</p>
+        </div>
+        <div class="project">
+          <h3>Project 2</h3>
+          <button>
+            <span>https://phase-2-challenge-six.vercel.app/</span>
         </button>
+          <p>I developed an application that efficiently organizes, searches, and securely stores user-inputted data, enhancing productivity and accessibility..</p>
       </div>
-      <div class="item">
-        <img src="images/ION-Adventure-Hotel-Iceland-Pool-2.webp" alt="Project 2 image">
-        <h3>Adventour</h3>
-        <p>Description of Adventour</p>
-        <h3>Embark on thrilling adventures, explore breathtaking landscapes, and discover the adrenaline-fueled experiences that await on our captivating adventure webpage.</h4>
-        <button class="cta">
-          <span>https://project-adventour.vercel.app/</span>
-          <svg viewBox="0 0 13 10" height="10px" width="15px">
-            <path d="M1,5 L11,5"></path>
-            <polyline points="8 1 12 5 8 9"></polyline>
-          </svg>
-        </button>
-      </div>
-      <div class="item">
-        <img src="image3.jpg" alt="Project 3 image">
-        <h3>Project 3</h3>
-        <p>Description of Project 3</p>
-        <button class="cta">
-          <span>live link</span>
-          <svg viewBox="0 0 13 10" height="10px" width="15px">
-            <path d="M1,5 L11,5"></path>
-            <polyline points="8 1 12 5 8 9"></polyline>
-          </svg>
-        </button>
-      </div>
-      <!-- Add more portfolio items as needed -->
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Web Design</li>
+            <li>Bootstrap</li>
+            <li>WordPress</li>
+            <li>Git</li>
+        </ul>
+    </section>
 
-  <footer>
-    <div class="social-media">
-      <a href="#">Instagram</a>
-      <a href="#">Twitter</a>
-      <a href="#">LinkedIn</a>
-      <!-- Add more social media links as needed -->
-    </div>
-  </footer>
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <h3>University of ABC</h3>
+                <p>Bachelor's Degree in Computer Science</p>
+            </li>
+        </ul>
+    </section>
 
-  <script src="script.js"></script>
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <ul>
+            <li>Email: john.doe@example.com</li>
+            <li>Phone: 123-456-7890</li>
+            <li>Website: www.johndoe.com</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 John Doe</p>
+    </footer>
 </body>
 </html>
