@@ -16,15 +16,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
+            if (link.getAttribute('href').substring(1) === current) {
                 link.classList.add('active');
             }
         });
     });
 
     navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
+
             const targetId = link.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             window.scrollTo({
