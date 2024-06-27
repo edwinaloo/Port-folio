@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('nav ul li a');
+    const sections = document.querySelectorAll('section');
+    const scrollUpBtn = document.getElementById('scrollUpBtn');
 
     window.addEventListener('scroll', () => {
         let current = '';
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
 
-            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
                 current = section.getAttribute('id');
             }
         });
@@ -20,6 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 link.classList.add('active');
             }
         });
+
+        // Show or hide the scroll up button
+        if (window.pageYOffset > 300) {
+            scrollUpBtn.style.display = 'block';
+        } else {
+            scrollUpBtn.style.display = 'none';
+        }
     });
 
     navLinks.forEach(link => {
@@ -32,6 +40,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 top: targetSection.offsetTop,
                 behavior: 'smooth'
             });
+        });
+    });
+
+    // Scroll up button functionality
+    scrollUpBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 });

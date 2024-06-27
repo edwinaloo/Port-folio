@@ -8,10 +8,9 @@
 
 body {
   line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
   background: url('images/background.jpg') no-repeat center center fixed;
   background-size: cover;
+  color: #333;
 }
 
 header {
@@ -63,10 +62,16 @@ p {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .section:nth-of-type(even) {
   background: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 img {
@@ -123,4 +128,25 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Scroll Up Button */
+#scrollUpBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  background-color: #00adb5;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#scrollUpBtn:hover {
+  background-color: #007b83;
 }
